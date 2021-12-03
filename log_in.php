@@ -1,4 +1,6 @@
-﻿<?php
+<?php
+
+session_start();
 
 include 'cls/global_check.php';
 include 'cls/global_db.php';
