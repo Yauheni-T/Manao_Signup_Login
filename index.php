@@ -3,7 +3,7 @@
 	//Определяем, авторизирован пользователь или нет
  	session_start();
 
- 	include 'txt\form_list.php';
+ 	include 'txt/form_list.php';
 	
 	if(isset($_COOKIE['login']) && isset($_COOKIE['password']))	{ //если cookie есть, то просто обновим время их жизни
 		setcookie("login", "", time() - 1, '/');
