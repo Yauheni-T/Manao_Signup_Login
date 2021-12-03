@@ -1,10 +1,10 @@
 ﻿<?php
 
-include 'cls\global_check.php';
-include 'cls\global_db.php';
+include 'cls/global_check.php';
+include 'cls/global_db.php';
 
-include 'txt\error_list.php';
-include 'txt\pattern_list.php';
+include 'txt/error_list.php';
+include 'txt/pattern_list.php';
 
 if(isset($_POST['submit'])) {
 
@@ -31,7 +31,7 @@ if(isset($_POST['submit'])) {
 	$user_login->err, 
 	$user_password->err, 
 	);
-	$log_in->filename = 'db\db.json';
+	$log_in->filename = 'db/db.json';
 	$log_in->err_login_pass = $array_err['err_login_pass'];
 	$log_in->err_login_bd = $array_err['err_login_bd'];
 	$log_in->err_signup = $array_err['err_signup'];
