@@ -1,10 +1,10 @@
 <?php
 
-include 'cls\global_check.php';
-include 'cls\global_db.php';
+include 'cls/global_check.php';
+include 'cls/global_db.php';
 
-include 'txt\error_list.php';
-include 'txt\pattern_list.php';
+include 'txt/error_list.php';
+include 'txt/pattern_list.php';
 
 if(isset($_POST['submit'])) {	// Проверка нажатия кнопки "Регистрация", если она нажата, происходит создание объекта класса Check и обращение к функции check_post
 	
@@ -68,7 +68,7 @@ if(isset($_POST['submit'])) {	// Проверка нажатия кнопки "�
 		$check_email->err, 
 		$user_name->err
 	);
-	$bd_json_rw->filename = 'db\db.json';
+	$bd_json_rw->filename = 'db/db.json';
 	$bd_json_rw->yes_signup = $array_err['yes_signup'];
 	$bd_json_rw->bd_read_write();
 	$user_name->err = $bd_json_rw->yes_signup;
