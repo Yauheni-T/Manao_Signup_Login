@@ -1,7 +1,6 @@
 <?php
 
-	//Определяем, авторизирован пользователь или нет
- 	session_start();
+	session_start();
 
  	include 'txt/form_list.php';
 	
@@ -27,8 +26,7 @@
 
 
 	
-	else 
-	{ 	
+	else { 	// если cookie нет, тогда выведем две кнопки, для перехода к регистрации и авторизации
 		$form_submit = $array_post['form_sugnin_login'];
 		if(isset($_POST['signup'])) {
 			header("Location: sign_up.php");
